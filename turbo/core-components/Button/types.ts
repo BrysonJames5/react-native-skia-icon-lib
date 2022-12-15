@@ -1,9 +1,5 @@
+import {ButtonColorPallatte} from '.';
 import {GestureResponderEvent} from 'react-native';
-
-export type ButtonType = {
-  primary: 'primary';
-  secondary: 'secondary';
-};
 
 export interface ButtonProps {
   /**
@@ -22,9 +18,9 @@ export interface ButtonProps {
   accessibilityLabel?: string;
 
   /**
-   * type of button can be small, medium, large
+   * type of button can be primary, secondary, or tiertiary
    */
-  type?: ButtonType;
+  buttonType: ButtonType;
 
   /**
    * onPress function to be envoked on a tap event
@@ -35,4 +31,16 @@ export interface ButtonProps {
    * onLongPRess function to be envoked on long press event
    */
   onLongPress: (event?: GestureResponderEvent) => void;
+
+  /**
+   * color theme for button
+   */
+  colorTheme: string;
+
+  /**
+   * give spacing from outer edges
+   */
+  padded?: boolean;
 }
+
+export type ButtonType = keyof typeof ButtonColorPallatte;

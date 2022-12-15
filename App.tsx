@@ -8,16 +8,13 @@
  * @format
  */
 
-import {CoreButton} from '@turbo/core-components';
-import React, {type PropsWithChildren} from 'react';
+import {CoreButton, TextField} from './turbo/core-components';
+import React, {useTransition, type PropsWithChildren} from 'react';
 import {
   Button,
   GestureResponderEvent,
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
   View
 } from 'react-native';
@@ -29,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen';
+import {utility} from '@turbo/core-theme';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -38,51 +36,54 @@ const App = () => {
   };
 
   return (
-    <>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white
-          }}>
-          <CoreButton
-            label="Test"
-            onPress={function (event?: GestureResponderEvent): void {
-              throw new Error('Function not implemented.');
-            }}
-            onLongPress={function (event?: GestureResponderEvent): void {
-              throw new Error('Function not implemented.');
-            }}
-          />
-        </View>
-      </ScrollView>
-    </>
+    <SafeAreaView>
+      <View
+        style={{
+          backgroundColor: isDarkMode ? Colors.black : Colors.white
+        }}>
+        <CoreButton
+          label="Test"
+          onPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          onLongPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          colorTheme={''}
+          buttonType="secondary"
+        />
+        <CoreButton
+          label="Test"
+          onPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          onLongPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          colorTheme={''}
+          buttonType="primary"
+        />
+        <CoreButton
+          label="Test"
+          onPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          onLongPress={function (event?: GestureResponderEvent): void {
+            throw new Error('Function not implemented.');
+          }}
+          colorTheme={''}
+          buttonType="tiertiary"
+        />
+        <TextField
+          label="testing the output of this "
+          size={utility.text.xlg}
+          type="italic"
+          accessibilityRole={''}
+          color={''}
+        />
+      </View>
+    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600'
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400'
-  },
-  highlight: {
-    fontWeight: '700'
-  }
-});
 
 export default App;

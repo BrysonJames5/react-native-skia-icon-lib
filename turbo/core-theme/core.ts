@@ -4,16 +4,16 @@ export default {
     xsm: 2,
     sm: 4,
     md: 8,
-    lg: 16,
+    lg: 10,
     xlg: 32
   },
   text: {
     sm: 12,
-    md: 16,
-    lg: 24,
-    xlg: 28
+    md: 18,
+    lg: 22,
+    xlg: 24
   },
   borderRadius: {
-    button: 4
+    button: 7
   }
 } as const;

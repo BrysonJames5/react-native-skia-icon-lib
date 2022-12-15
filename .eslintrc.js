@@ -10,7 +10,7 @@ module.exports = {
         '@typescript-eslint/no-shadow': ['error'],
         'no-shadow': 'off',
         '@typescript-eslint/no-unused-vars': ['warning'],
-        'module-resolver/use-alias': 1
+        'module-resolver/use-alias': 2
       }
     }
   ]

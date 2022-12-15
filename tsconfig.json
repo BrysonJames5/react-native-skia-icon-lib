@@ -13,7 +13,8 @@
   "strictFunctionTypes": true,
   "baseUrl": "./",
   "paths": {
-    "@turbo/*": ["turbo/*"]
+    "@turbo/core-components": ["turbo/core-components"],
+    "@turbo/core-theme": ["turbo/core-theme"]
   }
    
   }

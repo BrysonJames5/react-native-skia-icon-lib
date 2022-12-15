@@ -1,12 +1,14 @@
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
-    require.resolve('babel-plugin-module-resolver'),
-    {
-      root: ['./src'],
-      alias: {
-        '@turbo/core': `./turbo`
+    [
+      'module-resolver',
+      {
+        alias: {
+          '@turbo/core': './turbo/core-components',
+          '@turbo/core-theme': './turbo/core-theme'
+        }
       }
-    }
+    ]
   ]
 };
