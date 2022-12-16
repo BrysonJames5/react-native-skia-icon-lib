@@ -11,6 +11,7 @@ export const TextField = ({
   accessibilityRole,
   color
 }: TextFieldProps) => {
+  console.log(`text field: ${type}`);
   return (
     <TextWrapper
       size={size}
@@ -26,6 +27,6 @@ export const TextField = ({
 const TextWrapper = styled.Text<TextFieldProps>(props => ({
   fontSize: props.size ? props.size : utility.text.md,
   color: props.color ? props.color : 'black',
-  fontFamily: props.type ? FontFamily[props.type] : 'Roboto-Regular',
+  fontFamily: FontFamily[props.type],
   margin: utility.padding.xsm
 }));

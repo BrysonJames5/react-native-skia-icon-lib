@@ -1,5 +1,6 @@
 import {ButtonColorPallatte} from '.';
 import {GestureResponderEvent} from 'react-native';
+import {FontFamily} from '@turbo/core-theme';
 
 export interface ButtonProps {
   /**
@@ -30,17 +31,14 @@ export interface ButtonProps {
   /**
    * onLongPRess function to be envoked on long press event
    */
-  onLongPress: (event?: GestureResponderEvent) => void;
-
-  /**
-   * color theme for button
-   */
-  colorTheme: string;
+  onLongPress?: (event?: GestureResponderEvent) => void;
 
   /**
    * give spacing from outer edges
    */
   padded?: boolean;
+
+  textType?: keyof typeof FontFamily;
 }
 
 export type ButtonType = keyof typeof ButtonColorPallatte;

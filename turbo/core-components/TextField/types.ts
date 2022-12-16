@@ -43,7 +43,6 @@ export interface TextFieldProps {
    */
   color: string;
 }
-
 type FontFamilyMap = {
   regular: 'Roboto-Regular';
   italic: 'Roboto-Italic';

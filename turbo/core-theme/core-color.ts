@@ -3,8 +3,8 @@
  */
 export default {
   analogous: {
-    first: '#2E8DD1',
-    second: '#2ED1C4',
+    first: 'rgb(46, 141, 209)',
+    second: 'rgb(46, 209, 196)',
     third: '#2E3BD1',
     white: '#FFFFFF'
   }

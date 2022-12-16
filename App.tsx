@@ -26,60 +26,32 @@ import {
   LearnMoreLinks,
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen';
-import {utility} from '@turbo/core-theme';
+import {FontFamily, utility} from '@turbo/core-theme';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter
+  const press = () => {
+    console.log('press');
   };
-
   return (
     <SafeAreaView>
-      <View
-        style={{
-          backgroundColor: isDarkMode ? Colors.black : Colors.white
-        }}>
-        <CoreButton
+      <View>
+        {/* <CoreButton
           label="Test"
-          onPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          onLongPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          colorTheme={''}
+          onPress={press}
           buttonType="secondary"
+          textType="thin"
         />
         <CoreButton
           label="Test"
-          onPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          onLongPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          colorTheme={''}
+          onPress={press}
           buttonType="primary"
-        />
+          textType="regular"
+        /> */}
         <CoreButton
           label="Test"
-          onPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          onLongPress={function (event?: GestureResponderEvent): void {
-            throw new Error('Function not implemented.');
-          }}
-          colorTheme={''}
-          buttonType="tiertiary"
-        />
-        <TextField
-          label="testing the output of this "
-          size={utility.text.xlg}
-          type="italic"
-          accessibilityRole={''}
-          color={''}
+          onPress={press}
+          buttonType="primary"
+          textType="bold"
         />
       </View>
     </SafeAreaView>
