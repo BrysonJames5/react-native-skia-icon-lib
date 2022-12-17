@@ -11,7 +11,6 @@ export const TextField = ({
   accessibilityRole,
   color
 }: TextFieldProps) => {
-  console.log(`text field: ${type}`);
   return (
     <TextWrapper
       size={size}

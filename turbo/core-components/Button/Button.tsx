@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {ButtonProps} from './types';
 import {Pressable, Animated} from 'react-native';
 import styled from 'styled-components/native';
-import {colorWheel, utility} from '@turbo/core-theme';
+import {utility} from '@turbo/core-theme';
 import {TextField} from '../TextField';
 import {ButtonColorPallatte} from '.';
 

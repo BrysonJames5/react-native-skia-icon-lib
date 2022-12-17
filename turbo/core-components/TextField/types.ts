@@ -41,7 +41,7 @@ export interface TextFieldProps {
   /**
    * color of the text from color wheel
    */
-  color: string;
+  color?: string;
 }
 type FontFamilyMap = {
   regular: 'Roboto-Regular';

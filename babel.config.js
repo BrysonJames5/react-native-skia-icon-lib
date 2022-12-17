@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@turbo/core': './turbo/core-components',
+          '@turbo/core-components': './turbo/core-components',
           '@turbo/core-theme': './turbo/core-theme'
         }
       }
